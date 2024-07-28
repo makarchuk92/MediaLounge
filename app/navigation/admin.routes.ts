@@ -1,4 +1,4 @@
-import Admin from "@/components/screens/admin/home/admin";
+import Admin from "@/components/screens/admin/home/Admin";
 import { IRoute } from "./navigation.types";
 
 export const adminRoutes: IRoute[] = [{

@@ -12,7 +12,9 @@ const Navigation: FC  = () => {
   return (
     <NavigationContainer>
         <Stack.Navigator
-           
+            screenOptions={{
+                headerShown: false
+            }}
         >
             {userRoutes.map( route => (
                 <Stack.Screen key={route.name} {...route}/>
