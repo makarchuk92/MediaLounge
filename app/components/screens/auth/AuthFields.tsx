@@ -1,17 +1,19 @@
 import { View, Text } from "react-native";
 import React, { FC } from "react";
 import { Control } from "react-hook-form";
+import Field from "@/components/ui/form-elements/field/Field";
+
 
 interface IAuthFields {
-    control: Control
+    control: Control<IAuthFormData>
     isPassRequired?: boolean
 }
 
-const AuthFields: FC<IAuthFields> = () => {
+const AuthFields: FC<IAuthFields> = ({control, isPassRequired}) => {
   return (
-    <View>
-      <Text>AuthFields</Text>
-    </View>
+    <>
+      <Field<IAuthFields> control={control} name='email'  />
+    </>
   );
 };
 
