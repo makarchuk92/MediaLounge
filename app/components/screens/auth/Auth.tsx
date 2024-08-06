@@ -2,8 +2,9 @@ import Button from "@/components/ui/button/Button";
 import Loader from "@/components/ui/Loader";
 import { IAuthFormData } from "@/types/auth.interface";
 import React, { useState } from "react";
-import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { Pressable, Text, View } from "react-native";
+import AuthFields from "./AuthFields";
 
 const Auth = () => {
 
@@ -35,7 +36,7 @@ const Auth = () => {
            )
             : (
             <>
-            
+            <AuthFields control={control} isPassRequired />
             <Button onPress={handleSubmit(onSubmit)} icon={"film"}>
                 Go to watch
             </Button>
