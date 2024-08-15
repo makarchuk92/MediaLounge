@@ -1,8 +1,7 @@
-import { View } from 'react-native'
 import { createContext, FC, PropsWithChildren, useEffect, useState } from 'react'
 import { IContext, TypeUserState } from './auth-provider.interface'
 import * as SplashScreen from 'expo-splash-screen'
-import { IUser } from '@/types/user.interface'
+
 
 export const AuthContext = createContext({} as IContext)
 

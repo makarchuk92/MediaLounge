@@ -10,7 +10,7 @@ const Field = <T extends Record<string, any>>
     <Controller control={control} name={name} rules={rules} render={
         ({field: {value, onChange, onBlur}, fieldState: {error}}) => <>
         <View className={cn(
-            'bg-[#232323] w-full border rounded-lg pb-4 pt-2.5 px-4 my-1.5',
+            'bg-[#b3a4b3] w-full border rounded-lg pb-4 pt-2.5 px-4 my-1.5',
             error ? 'border-red' : 'border-transparent'
         )}>
             <TextInput 
