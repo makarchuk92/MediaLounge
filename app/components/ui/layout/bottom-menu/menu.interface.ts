@@ -5,3 +5,5 @@ export interface IMenuItem {
     iconName: TypeFeatherIconNames
     path: keyof TypeRootStackParamList
 }
+
+export type TypeNavigate = (screenName: keyof TypeRootStackParamList) => void

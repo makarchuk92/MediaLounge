@@ -1,13 +1,13 @@
 import { View, Text, Pressable } from 'react-native'
 import React, { FC } from 'react'
-import { IMenuItem } from './menu.interface'
+import { IMenuItem, TypeNavigate } from './menu.interface'
 import { TypeRootStackParamList } from '@/navigation/navigation.types'
 import { Feather } from '@expo/vector-icons';
 import { getColor } from '@/config/colors.config';
 
 interface IMenuItemProps {
     item: IMenuItem
-    nav: (screenName: keyof TypeRootStackParamList) => void
+    nav: TypeNavigate
     currentRoute?: string
 }
 
