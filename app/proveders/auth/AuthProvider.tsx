@@ -1,6 +1,7 @@
 import { createContext, FC, PropsWithChildren, useEffect, useState } from 'react'
 import { IContext, TypeUserState } from './auth-provider.interface'
 import * as SplashScreen from 'expo-splash-screen'
+import { IUser } from '@/types/user.interface'
 
 
 export const AuthContext = createContext({} as IContext)
@@ -8,7 +9,7 @@ export const AuthContext = createContext({} as IContext)
 SplashScreen.preventAutoHideAsync()
 
 const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [user, setUser] = useState<TypeUserState>(null)
+  const [user, setUser] = useState<TypeUserState>({} as IUser)
 
   useEffect(() => {
     let mounted = true
