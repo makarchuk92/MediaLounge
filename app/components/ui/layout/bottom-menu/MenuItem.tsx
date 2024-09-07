@@ -1,7 +1,6 @@
-import { View, Text, Pressable } from 'react-native'
+import { Pressable } from 'react-native'
 import React, { FC } from 'react'
-import { IMenuItem, TypeNavigate } from './menu.interface'
-import { TypeRootStackParamList } from '@/navigation/navigation.types'
+import type { IMenuItem, TypeNavigate } from './menu.interface'
 import { Feather } from '@expo/vector-icons';
 import { getColor } from '@/config/colors.config';
 
