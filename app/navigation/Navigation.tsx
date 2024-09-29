@@ -3,6 +3,7 @@ import { NavigationContainer, useNavigationContainerRef } from "@react-navigatio
 import PrivateNavigate from "./PrivateNavigate";
 import { useAuth } from "@/hooks/useAuth";
 import BottomMenu from "@/components/ui/layout/bottom-menu/BottomMenu";
+import { useCheckAuth } from "@/proveders/auth/useCheckAuth";
 
 
 
@@ -23,6 +24,8 @@ const Navigation: FC = () => {
       navRef.removeListener('state', listener)
     }
   }, [])
+
+  useCheckAuth(currentRoute)
 
   return (
     <>
